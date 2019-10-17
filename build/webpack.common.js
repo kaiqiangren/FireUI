@@ -76,9 +76,9 @@ module.exports = {
                 }
             },
             {
-                test: /\.(eot|ttf|svg)$/,//以jpg结尾的文件
+                test: /\.(eot|ttf|svg)$/,
                 use: {
-                    loader: "file-loader", //使用file-loader打包字体图标文件
+                    loader: "file-loader",
                 }
             }
         ]
