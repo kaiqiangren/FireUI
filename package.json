@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A Vue2.x UI!",
   "sideEffects": false,
-  "main": "index.js",
+  "main": "lib/FireUI.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
     "devBuild": "webpack --config ./build/webpack.dev.js",

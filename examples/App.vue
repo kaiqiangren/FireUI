@@ -1,7 +1,10 @@
 <template>
     <div>
         <fe-button>
-            fe-button
+            fe-button123123132
+        </fe-button>
+        <fe-button>
+            fe-button123123132
         </fe-button>
     </div>
 </template>

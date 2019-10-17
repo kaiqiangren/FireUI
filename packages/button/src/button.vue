@@ -1,39 +1,29 @@
 <template>
-    <div class="fe-button">
-        <button type="native-type">
-            <slot></slot>
-        </button>
-    </div>
+    <button :type="nativeType" class="fe-button">
+        <slot></slot>
+    </button>
 </template>
 <script>
     export default{
         name: 'FeButton',
-        props:{
-            type:{
-                type:String,
-                default:""
+        props: {
+            type: {
+                type: String,
+                default: ""
             },
-            loading:{
-                type:Boolean,
-                default:false
+            loading: {
+                type: Boolean,
+                default: false
             },
-            disabled:{
-                type:Boolean,
-                default:false
+            disabled: {
+                type: Boolean,
+                default: false
             },
-            "native-type":{
-                type:String,
-                default:"button"
+            nativeType: {
+                type: String,
+                default: "button"
             }
         },
-        data(){
-            return {}
-        },
-        methods: {},
-        mounted: function () {
-
-
-        }
+        methods: {}
     }
-
 </script>
