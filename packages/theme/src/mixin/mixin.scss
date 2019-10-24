@@ -1,0 +1,8 @@
+@import "config";
+
+@mixin b($block){
+  $B: $name-prefix+'-'+$block !global;
+  .#{$B} {
+    @content;
+  }
+}

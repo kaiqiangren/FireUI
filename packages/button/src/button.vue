@@ -1,5 +1,17 @@
 <template>
-    <button :type="nativeType" class="fe-button">
+    <button
+            :type="nativeType"
+            class="fe-button"
+            @click="handleClick"
+            :class="[
+          type ? 'fe-button--' + type : '',
+          buttonSize ? 'fe-button--' + buttonSize : '',
+          {
+            'is-disabled': disabled,
+            'is-loading': loading
+          }
+        ]"
+    >
         <slot></slot>
     </button>
 </template>
@@ -8,6 +20,10 @@
         name: 'FeButton',
         props: {
             type: {
+                type: String,
+                default: "primary"
+            },
+            buttonSize: {
                 type: String,
                 default: ""
             },
@@ -24,6 +40,10 @@
                 default: "button"
             }
         },
-        methods: {}
+        methods: {
+            handleClick(e){
+                this.$emit("click",e);
+            }
+        }
     }
 </script>

@@ -1,15 +1,25 @@
 @charset "UTF-8";
 @import "common/var";
+@import "mixin/mixin";
 
-.fe-button{
-  color: $--color-text-primary;
-  background-color: $--color-primary;
-  white-space: nowrap;
-  line-height: 1;
-  -webkit-appearance: none;
-  border:1px solid $--border-color-base;
-  &:hover{
-    cursor: pointer;
-    background-color:$--color-primary-light-4;
+@include b(button){
+    color: $--color-white;
+    background-color: $--color-primary;
+    white-space: nowrap;
+    line-height: 1;
+    padding: 12px 20px;
+    border-radius: $--border-radius-base;
+    -webkit-appearance: none;
+    border:$--border-width-base solid $--border-color-base;
+    &:hover{
+      cursor: pointer;
+      background-color:$--color-primary-light-4;
+    }
+    &:active{
+      outline: none;
+    }
   }
+  .is-disabled{
+    pointer-events:none;
 }
+
