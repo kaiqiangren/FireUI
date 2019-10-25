@@ -1,6 +1,7 @@
 <template>
     <div>
-        <fe-button>
+        <fe-button
+        >
             按钮测试
         </fe-button>
     </div>

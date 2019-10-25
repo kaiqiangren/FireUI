@@ -3,6 +3,7 @@
             :type="nativeType"
             class="fe-button"
             @click="handleClick"
+            :disabled="disabled"
             :class="[
           type ? 'fe-button--' + type : '',
           buttonSize ? 'fe-button--' + buttonSize : '',
