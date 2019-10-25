@@ -2,24 +2,31 @@
 @import "common/var";
 @import "mixin/mixin";
 
-@include b(button){
-    color: $--color-white;
-    background-color: $--color-primary;
-    white-space: nowrap;
-    line-height: 1;
-    padding: 12px 20px;
-    border-radius: $--border-radius-base;
-    -webkit-appearance: none;
-    border:$--border-width-base solid $--border-color-base;
-    &:hover{
-      cursor: pointer;
-      background-color:$--color-primary-light-4;
-    }
-    &:active{
-      outline: none;
-    }
+@include b(button) {
+  color: $--color-white;
+  background-color: $--color-primary;
+  white-space: nowrap;
+  line-height: 1;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: $--border-radius-base;
+  -webkit-appearance: none;
+  border: $--border-width-base solid $--border-color-base;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
   }
-  .is-disabled{
-    pointer-events:none;
+
+  &:active {
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    outline: none;
+  }
 }
+
+
 

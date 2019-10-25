@@ -4,12 +4,16 @@
         >
             按钮测试
         </fe-button>
+        <fe-button
+                disabled
+        >
+            按钮测试
+        </fe-button>
     </div>
 </template>
-<style lang="scss">
-    @import "../packages/theme/src/button.scss";
-</style>
+
 <script>
+    import "../packages/theme/index";
     import FeButton from "../packages/button/src/button";
     export default{
         components: {FeButton},

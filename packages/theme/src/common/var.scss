@@ -78,3 +78,7 @@ $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
 /// borderRadius|1|Radius|0
 $--border-radius-zero: 0 !default;
+
+/* button */
+$--button-hover-tint-percent: 20% !default;
+$--button-active-shade-percent: 10% !default;
