@@ -13,6 +13,7 @@
           }
         ]"
     >
+        <span v-if="icon" :class="[icon?'fe-icon--'+icon:'']"></span>
         <slot></slot>
     </button>
 </template>
@@ -22,7 +23,11 @@
         props: {
             type: {
                 type: String,
-                default: "primary"
+                default: ""
+            },
+            icon:{
+                type: String,
+                default: ""
             },
             buttonSize: {
                 type: String,

@@ -1,12 +1,9 @@
 <template>
     <div>
-        <fe-button
-        >
+        <fe-button @click="handleClick" type="primary">
             按钮测试
         </fe-button>
-        <fe-button
-                disabled
-        >
+        <fe-button disabled @click="handleClick" type="primary">
             按钮测试
         </fe-button>
     </div>
@@ -21,10 +18,10 @@
         data(){
             return {}
         },
-        methods: {},
-        mounted: function () {
-
-
+        methods: {
+            handleClick(e){
+                console.log(e)
+            }
         }
     }
 

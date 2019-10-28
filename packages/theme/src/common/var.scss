@@ -12,6 +12,7 @@ $--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
 $--color-primary: #409EFF !default;
 $--color-white: #FFFFFF !default;
 $--color-black: #000000 !default;
+
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
@@ -21,6 +22,7 @@ $--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /
 $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* c6e2ff */
 $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
+
 $--color-success: #67C23A !default;
 $--color-warning: #E6A23C !default;
 $--color-danger: #F56C6C !default;
@@ -67,18 +69,69 @@ $--index-popper: 2000 !default;
 
 /* Border */
 $--border-width-base: 1px !default;
+
 $--border-style-base: solid !default;
+
 $--border-color-hover: $--color-text-placeholder !default;
+
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
-/// borderRadius|1|Radius|0
+
 $--border-radius-base: 4px !default;
-/// borderRadius|1|Radius|0
 $--border-radius-small: 2px !default;
-/// borderRadius|1|Radius|0
 $--border-radius-circle: 100% !default;
-/// borderRadius|1|Radius|0
 $--border-radius-zero: 0 !default;
 
 /* button */
+$--button-font-size: $--font-size-base !default;
+$--button-font-weight: $--font-weight-primary !default;
+
+$--button-border-radius: $--border-radius-base !default;
+
+$--button-padding-vertical: 12px !default;
+$--button-padding-horizontal: 20px !default;
+
+$--button-medium-font-size: $--font-size-base !default;
+$--button-medium-border-radius: $--border-radius-base !default;
+$--button-medium-padding-vertical: 10px !default;
+$--button-medium-padding-horizontal: 20px !default;
+
+$--button-small-font-size: 12px !default;
+$--button-small-border-radius: #{$--border-radius-base - 1} !default;
+$--button-small-padding-vertical: 9px !default;
+$--button-small-padding-horizontal: 15px !default;
+
+$--button-mini-font-size: 12px !default;
+$--button-mini-border-radius: #{$--border-radius-base - 1} !default;
+$--button-mini-padding-vertical: 7px !default;
+$--button-mini-padding-horizontal: 15px !default;
+
+$--button-default-font-color: $--color-text-regular !default;
+$--button-default-background-color: $--color-white !default;
+$--button-default-border-color: $--border-color-base !default;
+
+$--button-disabled-font-color: $--color-text-placeholder !default;
+$--button-disabled-background-color: $--color-white !default;
+$--button-disabled-border-color: $--border-color-lighter !default;
+
+$--button-primary-border-color: $--color-primary !default;
+$--button-primary-font-color: $--color-white !default;
+$--button-primary-background-color: $--color-primary !default;
+
+$--button-success-border-color: $--color-success !default;
+$--button-success-font-color: $--color-white !default;
+$--button-success-background-color: $--color-success !default;
+
+$--button-warning-border-color: $--color-warning !default;
+$--button-warning-font-color: $--color-white !default;
+$--button-warning-background-color: $--color-warning !default;
+
+$--button-danger-border-color: $--color-danger !default;
+$--button-danger-font-color: $--color-white !default;
+$--button-danger-background-color: $--color-danger !default;
+
+$--button-info-border-color: $--color-info !default;
+$--button-info-font-color: $--color-white !default;
+$--button-info-background-color: $--color-info !default;
+
 $--button-hover-tint-percent: 20% !default;
 $--button-active-shade-percent: 10% !default;

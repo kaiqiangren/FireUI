@@ -1,18 +1,47 @@
 @charset "UTF-8";
 @import "common/var";
+@import "mixin/button";
 @import "mixin/mixin";
+@import "mixin/util";
 
 @include b(button) {
-  color: $--color-white;
-  background-color: $--color-primary;
-  white-space: nowrap;
-  line-height: 1;
+  @include utils-user-select(none);
+  @include m(primary) {
+    @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+  }
+  @include m(success) {
+    @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
+  }
+  @include m(warning) {
+    @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
+  }
+  @include m(danger) {
+    @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
+  }
+  @include m(info) {
+    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+  }
+  color: $--button-default-font-color;
+  text-align: center;
+  box-sizing: border-box;
   outline: none;
+  margin: 0;
+  transition: .1s;
+  line-height: 1;
+  background: $--button-default-background-color;
+  white-space: nowrap;
   padding: 12px 20px;
   border-radius: $--border-radius-base;
   -webkit-appearance: none;
-  border: $--border-width-base solid $--border-color-base;
-
+  border: $--border-width-base solid $--button-default-border-color;
+  & + & {
+    margin-left: 10px;
+  }
+  & [class*="fe-icon-"] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
   &:hover,
   &:focus {
     cursor: pointer;
@@ -25,6 +54,12 @@
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     outline: none;
+  }
+  &.is-disabled{
+    cursor: not-allowed;
+    color: $--button-disabled-font-color;
+    border-color: $--button-disabled-border-color;
+    background-color: $--button-disabled-background-color;
   }
 }
 

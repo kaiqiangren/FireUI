@@ -1,8 +1,23 @@
 @import "config";
 
+/*命名空间查找器*/
 @mixin b($block){
   $B: $name-prefix+'-'+$block !global;
   .#{$B} {
     @content;
+  }
+}
+/*混合查找器*/
+@mixin m($modifier) {
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
   }
 }
