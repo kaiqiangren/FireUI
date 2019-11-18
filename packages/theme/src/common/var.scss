@@ -73,6 +73,7 @@ $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
 
 $--border-color-hover: $--color-text-placeholder !default;
+$--boder-color-focus:$--color-primary !default;
 
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
 
@@ -80,6 +81,8 @@ $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
 $--border-radius-zero: 0 !default;
+
+$--boder-transition:cubic-bezier(.645,.045,.355,1) !default;
 
 /* button */
 $--button-font-size: $--font-size-base !default;
