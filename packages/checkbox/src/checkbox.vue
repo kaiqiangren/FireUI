@@ -1,12 +1,13 @@
 <template>
-    <label class="fe-checkbox" :class="{'is-checked':checked}">
-        <span class="fe-checkbox-inner"></span>
+    <label class="fe-checkbox" >
+        <span class="fe-checkbox-inner" :class="{'is-checked':isChecked}"></span>
         <input
                 class="fe-checkbox-native"
                 :name="name"
                 :readonly="readonly"
-                :disabled="disabled"
-                :checked="checked"
+                :disabled="isDisabled"
+                @change="handleChange"
+                v-model="selfModel"
                 type="checkbox"
         />
         <span class="fe-checkbox-label">
@@ -18,6 +19,11 @@
 <script>
     export default {
         name: "FeCheckbox",
+        data(){
+            return {
+                selfModel:false
+            }
+        },
         props: {
             name: String,
             disabled: {
@@ -31,6 +37,19 @@
             checked:{
                 type: Boolean,
                 default: false
+            }
+        },
+        computed:{
+            isDisabled(){
+                return  this.disabled
+            },
+            isChecked(){
+                return this.checked || this.selfModel
+            }
+        },
+        methods:{
+            handleChange(e){
+                this.$emit("change",e.target.checked,e)
             }
         }
     }

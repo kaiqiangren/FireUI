@@ -5,6 +5,7 @@
 
 
 @include b(checkbox) {
+  @include utils-user-select(none);
   color: #606266;
   font-weight: 500;
   font-size: 14px;
@@ -12,7 +13,6 @@
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
-  user-select: none;
   .fe-checkbox-native {
     width: 0;
     height: 0;
@@ -23,25 +23,32 @@
     opacity: 0;
   }
   .fe-checkbox-inner {
-    background: #409eff;
-    border: 1px solid #409eff;
+    background: $--color-white;
+    border: $--border-base;
     width: 14px;
     height: 14px;
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    &::after{
-      content: "";
-      border: 2px solid #fff;
-      box-sizing: content-box;
-      position: absolute;
-      width: 3px;
-      height: 7px;
-      border-left: 0;
-      border-top: 0;
-      left: 4px;
-      top: 2px;
-      transform: rotate(45deg);
+    &.is-checked {
+      &{
+        background: $--color-primary;
+        border: 1px solid $--color-primary;
+      }
+
+      &::after{
+        content: "";
+        border: 2px solid #fff;
+        box-sizing: content-box;
+        position: absolute;
+        width: 3px;
+        height: 7px;
+        border-left: 0;
+        border-top: 0;
+        left: 4px;
+        top: 2px;
+        transform: rotate(45deg);
+      }
     }
   }
   .fe-checkbox-label {
