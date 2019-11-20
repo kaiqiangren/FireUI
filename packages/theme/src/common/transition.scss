@@ -1,0 +1,11 @@
+
+.dropdown-from-top-enter-active,
+.dropdown-from-top-leave-active {
+  transition: all .1s cubic-bezier(.55,0,.1,1);
+}
+.dropdown-from-top-enter,
+.dropdown-from-top-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: center top;
+}

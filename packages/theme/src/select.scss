@@ -5,6 +5,56 @@
 
 
 @include b(select){
+  @include utils-user-select(none);
+  width: 200px;
+  position: relative;
+  .fe-select-input{
+    border:$--border-base;
+    border-radius:$--border-radius-base;
+    height: 26px;
+    &:hover{
+      border:$--border-width-base $--border-style-base $--border-color-hover;
+    }
+  }
+  .fe-select-dropdown{
+    min-width: 200px;
+    max-height: 150px;
+    position: relative;
+    background: #fff;
+    border:$--border-base;
+    border-radius:$--border-radius-base;
+    overflow-y: auto;
+  }
+  .fe-arrow-up{
+    margin-top: 4px;
+    border-width: 6px;
+    border-bottom-color: #ccc;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-style: solid;
+    border-top-width: 0;
+    position: relative;
+    filter: drop-shadow(0 2px 12px rgba(0,0,0,.03));
+    width: 0;
+    height: 0;
+    left: 50%;
+    z-index: 1;
+    &::after{
+      content: " ";
+      border-width: 6px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-bottom-color: #fff;
+      position: absolute;
+      left: 50%;
+      border-top-width: 0;
+      margin-left: -6px;
+      top: 1px;
+    }
 
+  }
 
 }

@@ -1,12 +1,19 @@
 <template>
     <div class="fe-option">
-        <slot></slot>
+        <template v-if="!label">
+            <slot></slot>
+        </template>
+        <span v-else>{{label}}</span>
     </div>
 </template>
 
 <script>
     export default {
-        name: "FeOption"
+        name: "FeOption",
+        props:{
+            label:String,
+            value:[String,Number,Object]
+        }
     }
 </script>
 

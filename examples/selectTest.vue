@@ -3,6 +3,17 @@
         <fe-select>
             <fe-option>选项1</fe-option>
             <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
+            <fe-option>选项2</fe-option>
         </fe-select>
     </div>
 </template>
